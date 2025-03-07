@@ -17,9 +17,9 @@ gridItems.forEach(item => {
 })
 
 function mouseEnter() {
-    
+    this.style.backgroundColor = "black";
 }
 
 function mouseLeave() {
-
+    this.style.backgroundColor = "";
 }
