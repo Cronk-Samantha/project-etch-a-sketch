@@ -8,3 +8,18 @@ for (let i = 0; i < gridSize * gridSize; i++) {
     div.classList.add("grid-item");
     flexContainer.appendChild(div);
 }
+
+const gridItems = document.querySelectorAll(".grid-item");
+
+gridItems.forEach(item => {
+    item.onmouseenter = mouseEnter;
+    item.onmouseleave = mouseLeave;
+})
+
+function mouseEnter() {
+    
+}
+
+function mouseLeave() {
+
+}
