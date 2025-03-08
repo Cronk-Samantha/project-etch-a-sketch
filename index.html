@@ -7,9 +7,25 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <h1 class="title">Virtual Etch-A-Sketch</h1>
     <div class="user-input">
-        <h1 class="title">Virtual Etch-A-Sketch</h1>
-        <p class="directions">To customize the grid of your etch-a-sketch, click on the button titled 'Generate' below. Once you click that, a prompt window will appear where you will enter your desired number of squares. Once you imput a number click the "OK" button within the prompt window. Your new grid will automatically display so you can admire your masterpiece! </p>
+        <p class="directions">To begin, select the grid color of your choice. Then click the button titled 'Generate'. A prompt window will appear asking you to enter your desired # of grids. Once you enter your desired number, click the "OK" button within the window prompt and volia! Your grid will generate automatically. Play around with your grid by hovering over and/or clicking on a box to fill it with color.</p>
+        <div class="buttons">
+            <input type="radio" name="color-choice" id="color1" value="black">
+            <label for="color1">Black</label>
+
+            <input type="radio" name="color-choice" id="color2" value="blue">
+            <label for="color2">Blue</label>
+
+            <input type="radio" name="color-choice" id="color3" value="red">
+            <label for="color3">Red</label>
+
+            <input type="radio" name="color-choice" id="color4" value="yellow">
+            <label for="color4">Yellow</label>
+            
+            <input type="radio" name="color-choice" id="color5" value="purple">
+            <label for="color5">Purple</label>
+        </div>
         <button id="generate" class="button1" type="button">Generate</button>
     </div>
     <div id="container"></div>
