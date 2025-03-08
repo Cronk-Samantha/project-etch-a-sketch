@@ -1,5 +1,7 @@
 const flexContainer = document.querySelector("#container");
 
+
+// USER CLICKS BUTTON & A PROMPT WINDOW APPEARS
 document.getElementById("generate").onclick = userPrompt;
 
 function userPrompt() {
@@ -13,7 +15,7 @@ function userPrompt() {
     }
 }
 
-
+// USER INPUT IS PASSED INTO THIS FUNCTION TO GENERATE NEW GRID
 function generateGrid(gridSize) {
     flexContainer.innerHTML = "";
     const gridItemSize = 1000 / gridSize;
@@ -24,6 +26,17 @@ function generateGrid(gridSize) {
             div.style.height = `${gridItemSize}px`;
             flexContainer.appendChild(div);
         }
+    divHoverEffect();
 }
 
-
+function divHoverEffect() {
+    const gridItems = document.querySelectorAll(".grid-item");
+    gridItems.forEach(div => {
+       div.addEventListener("mouseenter", () => {
+        div.style.backgroundColor = "black";
+       });
+       div.addEventListener("mouseleave", () => {
+        div.style.backgroundColor = "";
+       }) 
+    })
+}
