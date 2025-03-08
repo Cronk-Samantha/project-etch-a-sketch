@@ -6,11 +6,40 @@ body {
     width: 100vw;
 }
 
+.user-input {
+    text-align: center;
+    border: 2px solid navy;
+    border-radius: 5px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.user-input > h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.user-input > p {
+    font-style: italic;
+    font-size: 1em;
+}
+
+.button1 {
+    font-weight: 800;
+    width: 25%;
+    font-size: 1em;
+    border: 2px solid darkgrey;
+    background-color: yellow;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
 #container {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 0;
+    margin-top: 1em;
 }
 
 .grid-item {
