@@ -9,31 +9,21 @@ function userPrompt() {
         generateGrid(gridSize);
     } else {
         alert("Invalid input. Please try again.");
-        return userPrompt();
+        userPrompt();
     }
 }
 
 
 function generateGrid(gridSize) {
     flexContainer.innerHTML = "";
+    const gridItemSize = 1000 / gridSize;
         for (let i = 0; i < gridSize * gridSize; i++) {
             const div = document.createElement("div");
             div.classList.add("grid-item");
+            div.style.width = `${gridItemSize}px`;
+            div.style.height = `${gridItemSize}px`;
             flexContainer.appendChild(div);
         }
 }
 
-const gridItems = document.querySelectorAll(".grid-item");
 
-gridItems.forEach(item => {
-    item.onmouseenter = mouseEnter;
-    item.onmouseleave = mouseLeave;
-})
-
-function mouseEnter() {
-    this.style.backgroundColor = "black";
-}
-
-function mouseLeave() {
-    this.style.backgroundColor = "";
-}
