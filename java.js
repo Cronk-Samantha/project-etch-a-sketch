@@ -33,10 +33,21 @@ function divHoverEffect() {
     const gridItems = document.querySelectorAll(".grid-item");
     gridItems.forEach(div => {
        div.addEventListener("mouseenter", () => {
-        div.style.backgroundColor = "black";
+        div.style.backgroundColor = userColorChoice;
        });
        div.addEventListener("mouseleave", () => {
         div.style.backgroundColor = "";
        }) 
     })
 }
+
+// ASSIGN NEW VALUE FOR COLOR CHOICE BASED ON WHAT RADIO BUTTON IS CHOSEN
+let colorChoices = document.querySelectorAll('input[name="color-choice"]');
+let userColorChoice = "";
+
+colorChoices.forEach(btn => {
+    btn.addEventListener("change", () => {
+        userColorChoice = btn.value;
+        divHoverEffect();
+    })
+})
